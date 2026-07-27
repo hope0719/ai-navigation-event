@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,700&family=JetBrains+Mono:wght@500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">📋 筹备执行手册</a>
+            <a href="#hero" class="nav-logo"><span class="logo-mark">M</span>筹备执行手册</a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -33,12 +33,17 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
         <div class="hero-content">
-            <div class="hero-badge">活动筹备执行手册</div>
-            <h1 class="hero-title">怎么办好一场活动</h1>
+            <div class="hero-badge"><span class="dot"></span>活动筹备执行手册</div>
+            <h1 class="hero-title">怎么<span class="accent">办好</span>一场活动</h1>
             <p class="hero-subtitle">从 0 到 1 的完整时间线、执行细节与避坑指南</p>
             <div class="hero-cta">
                 <a href="#phase-pre" class="btn btn-primary">查看筹备流程</a>
                 <a href="#checklist" class="btn btn-secondary">可打印清单</a>
+            </div>
+            <div class="hero-meta">
+                <span>T-7 → T+7</span><span class="sep"></span>
+                <span>3 阶段</span><span class="sep"></span>
+                <span>组局官实战版</span>
             </div>
         </div>
         <div class="hero-wave">
@@ -51,7 +56,7 @@
     <!-- Phase 1: Pre-event -->
     <section id="phase-pre" class="section">
         <div class="container">
-            <h2 class="section-title">🎯 第一阶段：活动前筹备（T-7 天 ~ T-0）</h2>
+            <h2 class="section-title"><span class="sec-num">01 — T-7 → T-0</span>第一阶段：活动前筹备</h2>
             <p class="section-desc">一场活动的质量，90% 由筹备决定。这一阶段的目标是把所有不确定性降到最低，让参与者带着"已经准备好"的状态到场。</p>
 
             <div class="timeline">
@@ -100,7 +105,7 @@
                             </div>
                             <div class="task">
                                 <span class="task-check">☐</span>
-                                <span class="task-text">申请/准备物料：海报、PPT 模板、签���表、反馈二维码</span>
+                                <span class="task-text">申请/准备物料：海报、PPT 模板、签到表、反馈二维码</span>
                             </div>
                             <div class="task">
                                 <span class="task-check">☐</span>
@@ -117,7 +122,7 @@
                     <div class="timeline-marker">T-4</div>
                     <div class="timeline-card">
                         <h3>发布活动与建群</h3>
-                        <p>报名���就是你的"第一印象"。写清楚预期，能来的人才是对的人。</p>
+                        <p>报名页就是你的"第一印象"。写清楚预期，能来的人才是对的人。</p>
                         <div class="task-list">
                             <div class="task">
                                 <span class="task-check">☐</span>
@@ -207,7 +212,7 @@
     <!-- Phase 2: Event Day -->
     <section id="phase-day" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">🚀 第二阶段：活动日执行（T+0）</h2>
+            <h2 class="section-title"><span class="sec-num">02 — T+0</span>第二阶段：活动日执行</h2>
             <p class="section-desc">现场的目标不是"把内容讲完"，而是让每个人完成一次真实操作，并知道下一步怎么做。</p>
 
             <div class="phase-summary">
@@ -368,7 +373,7 @@
     <!-- Phase 3: Post-event -->
     <section id="phase-post" class="section">
         <div class="container">
-            <h2 class="section-title">📝 第三阶段：活动后收尾（T+1 ~ T+7）</h2>
+            <h2 class="section-title"><span class="sec-num">03 — T+1 → T+7</span>第三阶段：活动后收尾</h2>
             <p class="section-desc">活动结束不是终点。好的收尾能让一次聚会的价值延续到后续实践，甚至转化为下一次组局。</p>
 
             <div class="timeline">
@@ -455,7 +460,7 @@
     <!-- Host Guide -->
     <section id="host-guide" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">👨‍💼 组局官操作手册</h2>
+            <h2 class="section-title"><span class="sec-num">04 — Host Manual</span>组局官操作手册</h2>
             <p class="section-desc">单场活动的核心不是把所有事都自己做完，而是守住两件事：让大家完成一次真实实操，以及让每个人在场域里感到被接住、敢于参与。</p>
 
             <div class="host-grid">
@@ -529,7 +534,7 @@
                     <div class="control-tips">
                         <div class="control-tip">
                             <span class="tip-phase">开场</span>
-                            <p>"今天的目标不是要把全部流程讲完，而是让每个人完成一个小的实操结���。遇到问题先记下来，实操时间集中处理。"</p>
+                            <p>"今天的目标不是要把全部流程讲完，而是让每个人完成一个小的实操结果。遇到问题先记下来，实操时间集中处理。"</p>
                         </div>
                         <div class="control-tip">
                             <span class="tip-phase">实操</span>
@@ -552,8 +557,8 @@
     <!-- Checklist -->
     <section id="checklist" class="section">
         <div class="container">
-            <h2 class="section-title">✅ 全流程可打印清单</h2>
-            <p class="section-desc">点击复选框即��记录进度，状态会自动保存在浏览器中。</p>
+            <h2 class="section-title"><span class="sec-num">05 — Checklist</span>全流程可打印清单</h2>
+            <p class="section-desc">点击复选框即可记录进度，状态会自动保存在浏览器中。</p>
 
             <div class="checklist-grid">
                 <div class="checklist-column">
@@ -617,7 +622,7 @@
     <!-- FAQ -->
     <section id="faq" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">❓ 常见问题</h2>
+            <h2 class="section-title"><span class="sec-num">06 — FAQ</span>常见问题</h2>
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question">
