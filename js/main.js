@@ -85,28 +85,10 @@ function initSmoothScroll() {
 }
 
 // ========================================
-// FAQ Accordion
+// FAQ - answers are always visible
 // ========================================
 function initFAQ() {
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-
-        if (question) {
-            question.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
-
-                // Close all items
-                faqItems.forEach(faq => faq.classList.remove('active'));
-
-                // Open clicked item if it wasn't active
-                if (!isActive) {
-                    item.classList.add('active');
-                }
-            });
-        }
-    });
+    // No toggle needed; all answers displayed by default
 }
 
 // ========================================

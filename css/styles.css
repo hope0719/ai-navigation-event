@@ -712,7 +712,6 @@ body {
     align-items: flex-start;
     gap: 0.75rem;
     padding: 1.25rem;
-    cursor: pointer;
     transition: background 0.2s ease;
 }
 
@@ -741,14 +740,11 @@ body {
 }
 
 .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 1.25rem 1.25rem;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 300px;
-    padding: 0 1.25rem 1.25rem;
+    /* always visible */
 }
 
 .faq-answer p {
