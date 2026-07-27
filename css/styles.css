@@ -1795,6 +1795,66 @@ body::before {
     line-height: 1.7;
 }
 
+/* —— Mindset Cards（五大底层心法） —— */
+.mindset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.2rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.mindset-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.mindset-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.mindset-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--ochre);
+    opacity: 0.6;
+}
+
+.mindset-num {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--ochre);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+
+.mindset-card h4 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.7rem;
+}
+
+.mindset-card p {
+    font-size: 0.9rem;
+    color: var(--ink-2);
+    line-height: 1.75;
+}
+
 /* ========================================================
    Animations
    ======================================================== */
