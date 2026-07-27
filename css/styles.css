@@ -1179,12 +1179,12 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    .review-fullwidth .review-card {
-        padding: 1.4rem 1.2rem;
+    .ri-block {
+        padding: 1.2rem 1.1rem;
     }
 
-    .review-fullwidth .review-card li {
-        font-size: 0.85rem;
+    .ri-block li {
+        font-size: 0.84rem;
     }
 
     .nav-menu {
@@ -1657,61 +1657,130 @@ body::before {
     font-size: 0.75rem;
 }
 
-/* Event Review - Fullwidth stacked layout */
-.review-fullwidth {
+/* Review Inside (within host-prep section) */
+.review-inside {
     max-width: 880px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
-.review-fullwidth .review-card {
-    padding: 1.8rem 2rem;
+.ri-block {
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.8rem;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.review-fullwidth .review-card h4 {
-    font-size: 1.05rem;
-    margin-bottom: 1.1rem;
-    padding-bottom: 0.7rem;
+.ri-block:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+}
+
+.ri-block h4 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--line);
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.review-icon {
+.ri-block h4::before {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     flex-shrink: 0;
 }
 
-.review-good .review-icon {
+.ri-good h4 {
+    color: var(--moss);
+    border-bottom-color: var(--moss-soft);
+}
+
+.ri-good h4::before {
+    content: '★';
     background: var(--moss-soft);
     color: var(--moss);
 }
 
-.review-bad .review-icon {
-    background: var(--rust-soft);
+.ri-bad h4 {
     color: var(--rust);
+    border-bottom-color: var(--rust-soft);
 }
 
-.review-reuse .review-icon {
+.ri-bad h4::before {
+    content: '!';
+    background: var(--rust-soft);
+    color: var(--rust);
+    font-weight: 700;
+}
+
+.ri-reuse h4 {
+    color: var(--clay);
+    border-bottom-color: var(--clay-soft);
+}
+
+.ri-reuse h4::before {
+    content: '↻';
     background: var(--clay-soft);
     color: var(--clay);
 }
 
-.review-fullwidth .review-card li {
-    font-size: 0.9rem;
-    line-height: 1.7;
-    padding-left: 1.2rem;
+.ri-block ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
 }
 
-.review-fullwidth .review-card li strong {
+.ri-block li {
+    color: var(--ink-3);
+    font-size: 0.88rem;
+    line-height: 1.7;
+    padding-left: 1.1rem;
+    position: relative;
+}
+
+.ri-block li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: var(--ink-4);
+    font-weight: 700;
+}
+
+.ri-good li::before {
+    content: '✓';
+    color: var(--moss);
+    font-size: 0.75rem;
+}
+
+.ri-bad li::before {
+    content: '!';
+    color: var(--rust);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.ri-reuse li::before {
+    content: '↻';
+    color: var(--clay);
+    font-size: 0.75rem;
+}
+
+.ri-block li strong {
     color: var(--ink);
     font-weight: 600;
 }
