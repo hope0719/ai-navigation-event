@@ -1179,6 +1179,14 @@ body::before {
 }
 
 @media (max-width: 768px) {
+    .review-fullwidth .review-card {
+        padding: 1.4rem 1.2rem;
+    }
+
+    .review-fullwidth .review-card li {
+        font-size: 0.85rem;
+    }
+
     .nav-menu {
         position: fixed;
         top: var(--nav-height);
@@ -1647,6 +1655,75 @@ body::before {
     content: '↻';
     color: var(--clay);
     font-size: 0.75rem;
+}
+
+/* Event Review - Fullwidth stacked layout */
+.review-fullwidth {
+    max-width: 880px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.review-fullwidth .review-card {
+    padding: 1.8rem 2rem;
+}
+
+.review-fullwidth .review-card h4 {
+    font-size: 1.05rem;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.review-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.review-good .review-icon {
+    background: var(--moss-soft);
+    color: var(--moss);
+}
+
+.review-bad .review-icon {
+    background: var(--rust-soft);
+    color: var(--rust);
+}
+
+.review-reuse .review-icon {
+    background: var(--clay-soft);
+    color: var(--clay);
+}
+
+.review-fullwidth .review-card li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    padding-left: 1.2rem;
+}
+
+.review-fullwidth .review-card li strong {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+/* Prep section description */
+.prep-section-desc {
+    text-align: center;
+    color: var(--ink-3);
+    font-size: 0.95rem;
+    max-width: 540px;
+    margin: -0.5rem auto 1.5rem;
+    line-height: 1.7;
 }
 
 /* ========================================================
